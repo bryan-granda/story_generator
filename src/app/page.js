@@ -132,7 +132,7 @@ export default function Home() {
 
   return (
     <section className={styles['section']}>
-      <div className={styles['section__title']}>Generate a story using Plot Genie's schema and GPT-3. Select a prompt to Generate a story.</div>
+      <div className={styles['section__title']}>Generate a story using Plot Genie schema and GPT-3. Select a prompt to Generate a story.</div>
       <span className={styles['section__ul-title']}>{categoryTitles[categoryPointer]}</span>
       {currentCategory ? currentCategory : <span>Loading...</span>}
       <button type='submit' onSubmit={handleSubmit} onClick={handleSubmit}>
