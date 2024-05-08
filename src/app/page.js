@@ -55,15 +55,18 @@ export default function Home() {
 
   console.log('PAGE');
   /* Init with first category */
-  useEffect(_ => {
-    fetchCSVData(categories[categoryPointer]);
-  }, []);
+  useEffect(
+    _ => {
+      fetchCSVData(categories[categoryPointer]);
+    },
+    [fetchCSVData]
+  );
 
   useEffect(
     _ => {
       fetchCSVData(categories[categoryPointer]);
     },
-    [categoryPointer]
+    [categoryPointer, fetchCSVData]
   );
 
   /* Fetch CSV data */
