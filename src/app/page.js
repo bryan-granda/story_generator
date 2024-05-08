@@ -106,15 +106,17 @@ export default function Home() {
 
   const displayChoices = (
     <p>
-      {state['locale'] && `Locale: ${state['locale']}`}
+      {`Locale: ${state['locale']}`}
       <br />
-      {state['usualMale'] && `Usual Male: ${state['usualMale']}`}
+      {`Usual Male: ${state['usualMale']}`}
       <br />
       {`Usual Female: ${state['usualFemale']}`}
       <br />
       {`Unusual Male: ${state['unusualMale']}`}
       <br />
       {`Unusual Female: ${state['unusualFemale']}`}
+      <br />
+      {`Obstacles: ${state['obstacles']}`}
       <br />
       {`Problems: ${state['problems']}`}
       <br />
