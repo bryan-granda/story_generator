@@ -53,22 +53,6 @@ export default function Home() {
   const [categoryPointer, setCategoryPointer] = useState(0);
   const [currentCategory, setCurrentCategory] = useState(null);
 
-  console.log('PAGE');
-  /* Init with first category */
-  useEffect(
-    _ => {
-      fetchCSVData(categories[categoryPointer]);
-    },
-    [fetchCSVData]
-  );
-
-  useEffect(
-    _ => {
-      fetchCSVData(categories[categoryPointer]);
-    },
-    [categoryPointer, fetchCSVData]
-  );
-
   /* Fetch CSV data */
   const fetchCSVData = async file => {
     if (!file) return;
@@ -80,6 +64,18 @@ export default function Home() {
       console.error('Error fetching data: ', error);
     }
   };
+
+  /* Init with first category */
+  useEffect(_ => {
+    fetchCSVData(categories[categoryPointer]);
+  }, []);
+
+  useEffect(
+    _ => {
+      fetchCSVData(categories[categoryPointer]);
+    },
+    [categoryPointer]
+  );
 
   /* Update story parameters */
   const handleChoiceSelected = item => {
