@@ -1,0 +1,33 @@
+@import './../app/variables';
+
+.ul {
+  max-height: 30rem;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+
+  &__button {
+    text-align: center;
+    padding: 0.6rem 0.2rem;
+    background: none;
+    border: black 0.1rem solid;
+    border-radius: 0.6rem;
+    font-size: font-size(font-size-extra-small);
+  }
+
+  &__button:hover {
+    background: var(--color-tertiary);
+    color: var(--color-primary);
+  }
+
+  &__button:active {
+    background: var(--color-quaternary);
+    color: var(--color-primary);
+  }
+
+  &__button:focus-visible {
+    outline: 0.2rem solid var(--color-primary);
+    border-radius: 0.3rem;
+  }
+}

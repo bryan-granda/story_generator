@@ -1,0 +1,74 @@
+@import 'font-size';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+// Dark Color Palette
+html[data-theme='dark'] {
+  --color-primary: #f8f9fa;
+  --color-secondary: #212529;
+  --color-tertiary: #0372f2;
+  --color-quaternary: #dd6e42;
+}
+
+// Light Color Palette
+html {
+  --color-primary: #212529;
+  --color-secondary: #f8f9fa;
+  --color-tertiary: #0372f2;
+  --color-quaternary: #dd6e42;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  line-height: 1.9;
+  background-color: var(--color-secondary);
+  letter-spacing: 0.2rem;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+li {
+  list-style: none;
+}
+
+i {
+  color: var(--color-primary);
+  font-size: font-size(font-size-medium);
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:focus-visible {
+  outline: 0.2rem solid var(--color-primary);
+  border-radius: 0.3rem;
+}
+
+button:focus-visible {
+  outline: 0.2rem solid var(--color-primary);
+  border-radius: 0.3rem;
+}
+
+input[type='checkbox']:focus-visible {
+  outline: 0.1rem solid var(--color-primary);
+  border-radius: 0.2rem;
+}
+
+::selection {
+  background-color: grey;
+}

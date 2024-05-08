@@ -1,0 +1,49 @@
+@import './variables';
+
+.section {
+  padding: 10rem 5rem;
+
+  &__title {
+    font-size: font-size(font-size-regular);
+  }
+
+  &__ul-title {
+    font-size: font-size(font-size-regular);
+    font-weight: 600;
+    color: var(--color-tertiary);
+    display: block;
+    text-align: center;
+  }
+
+  &__ul {
+    max-height: 30rem;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+
+    &--button {
+      text-align: center;
+      padding: 0.6rem 0.2rem;
+      background: none;
+      border: black 0.1rem solid;
+      border-radius: 0.6rem;
+      font-size: font-size(font-size-extra-small);
+    }
+
+    &--button:hover {
+      background: var(--color-tertiary);
+      color: var(--color-primary);
+    }
+
+    &--button:active {
+      background: var(--color-quaternary);
+      color: var(--color-primary);
+    }
+
+    &--button:focus-visible {
+      outline: 0.2rem solid var(--color-primary);
+      border-radius: 0.3rem;
+    }
+  }
+}

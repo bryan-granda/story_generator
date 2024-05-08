@@ -1,0 +1,22 @@
+//*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* Fonts Sizes *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+$font-sizes: (
+  'font-size-xxsmall': clamp(0.8rem, 1.5vw, 1.3rem),
+  'font-size-extra-small': clamp(1rem, 1.5vw, 1.6rem),
+  'font-size-small': clamp(1.2rem, 1.5vw, 2rem),
+  'font-size-regular': clamp(2rem, 1.5vw, 2.4rem),
+  'font-size-medium': clamp(2.4rem, 1.5vw, 3.2rem),
+  'font-size-decent': clamp(3.2rem, 1.5vw, 3.6rem),
+  'font-size-large': clamp(1.8rem, 3vw, 3.6rem),
+  'font-size-xlarge': clamp(2.5rem, 3.5vw, 4.8rem),
+  'font-size-xxlarge': clamp(2.7rem, 3.5vw, 6.4rem)
+);
+
+@function font-size($font-size-style) {
+  @return map-get($font-sizes, $font-size-style);
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Placeholder Styles @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//Section Padding
+%section-padding {
+  padding: 3vh 7vw;
+}
